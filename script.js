@@ -54,6 +54,10 @@ function createDivs () {
     inDiv.style.width = `${boxSize}px`;
     inDiv.style.height = `${boxSize}px`;
     container.appendChild(inDiv);
+   
+    //display dimension of current Grid
+    const dimdisp = document.querySelector('.dispdim');
+    dimdisp.textContent = `Current Grid : ${dimmVal} X ${dimmVal}`;
     
     // add hover event listener
     inDiv.addEventListener('mouseenter', function(e) {

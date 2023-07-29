@@ -10,6 +10,8 @@ body {
     height: 800px;
     display: flex;
     align-items: flex-start;
+    flex-direction: column;
+    gap: 60px;
 }
 
 #container {
@@ -19,6 +21,14 @@ body {
     flex-wrap: wrap;
     
     
+}
+
+.dispdim {
+    width: auto;
+    height: auto;
+    font-size: large;
+    font-weight: bolder;
+
 }
 
 .content {
