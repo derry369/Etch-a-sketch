@@ -21,7 +21,7 @@ btn.addEventListener('click', takeInput);
 // erase existing layout and make a new sketch
 function takeInput() {
     
-    dimmVal = +prompt('Enter number of boxes on row or column. Max value = 100', 16);
+    dimmVal = +prompt('Enter number of boxes on row or column. Max value = 100 and Whole numbers only', 16);
     boxSize = (800 - (2 * dimmVal) ) / dimmVal;
 
     if(dimmVal === 0) {
@@ -53,15 +53,51 @@ function createDivs () {
     inDiv.classList.add('content');
     inDiv.style.width = `${boxSize}px`;
     inDiv.style.height = `${boxSize}px`;
+    inDiv.style.backgroundColor = 'hsla(359, 100%, 0%, 0)'
     container.appendChild(inDiv);
    
     //display dimension of current Grid
     const dimdisp = document.querySelector('.dispdim');
     dimdisp.textContent = `Current Grid : ${dimmVal} X ${dimmVal}`;
     
-    // add hover event listener
-    inDiv.addEventListener('mouseenter', function(e) {
-        e.target.style.background = 'green';
-    }
-    );
+    // add hover event listener 
+    inDiv.addEventListener('mouseenter', countHovers);
 };
+
+// increases color intensity by 10% on each hover till 100%
+function countHovers(e) {
+    
+    if(e.target.style.backgroundColor ===  'rgba(0, 0, 0, 0)') {
+        e.target.style.backgroundColor = `hsla(359, 100%, 0%, ${1 / 10})`;
+
+    } else if(e.target.style.backgroundColor === 'rgba(0, 0, 0, 0.1)') {
+        e.target.style.backgroundColor = `hsla(359, 100%, 0%, ${2 / 10})`;
+
+    } else if(e.target.style.backgroundColor === 'rgba(0, 0, 0, 0.2)') {
+        e.target.style.backgroundColor = `hsla(359, 100%, 0%, ${3 / 10})`;
+    
+    } else if(e.target.style.backgroundColor === 'rgba(0, 0, 0, 0.3)') {
+        e.target.style.backgroundColor = `hsla(359, 100%, 0%, ${4 / 10})`;
+    
+    } else if(e.target.style.backgroundColor === 'rgba(0, 0, 0, 0.4)') {
+        e.target.style.backgroundColor = `hsla(359, 100%, 0%, ${5 / 10})`;
+     
+    } else if(e.target.style.backgroundColor === 'rgba(0, 0, 0, 0.5)') {
+        e.target.style.backgroundColor = `hsla(359, 100%, 0%, ${6 / 10})`;
+
+    } else if(e.target.style.backgroundColor === 'rgba(0, 0, 0, 0.6)') {
+        e.target.style.backgroundColor = `hsla(359, 100%, 0%, ${7 / 10})`;
+
+    } else if(e.target.style.backgroundColor === 'rgba(0, 0, 0, 0.7)') {
+        e.target.style.backgroundColor = `hsla(359, 100%, 0%, ${8 / 10})`;
+
+    } else if(e.target.style.backgroundColor === 'rgba(0, 0, 0, 0.8)') {
+        e.target.style.backgroundColor = `hsla(359, 100%, 0%, ${9 / 10})`;
+
+    } else if(e.target.style.backgroundColor === 'rgba(0, 0, 0, 0.9)') {
+        e.target.style.backgroundColor = `hsla(359, 100%, 0%, ${10 / 10})`;
+
+    };
+
+};
+

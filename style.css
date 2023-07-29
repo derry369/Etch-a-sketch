@@ -6,6 +6,11 @@ body {
 
 }
 
+button {
+    font-size: large;
+    font-weight: bold
+}
+
 #btn-cont{
     height: 800px;
     display: flex;
@@ -18,20 +23,17 @@ body {
     width: 800px;
     height: 800px;
     display: flex;
-    flex-wrap: wrap;
-    
-    
+    flex-wrap: wrap;   
 }
 
 .dispdim {
     width: auto;
     height: auto;
-    font-size: large;
+    font-size: larger;
     font-weight: bolder;
-
 }
 
 .content {
-    border: 1px solid black;
+    border: 1px solid dimgray; 
 }
 
